@@ -1,0 +1,140 @@
+AWS lightsail
+*************
+
+Amazon Lightsail: Lightsail is designed to be the easiest way to launch and manage a virtual private server with AWS. Lightsail plans include everything
+you need to jumpstart your project – a virtual machine, SSD-based storage, data transfer, DNS management, and a static IP – for a low, predictable price.
+
+Reference : https://github.com/jenkins-training   - For jenkins instance set up 
+
+Below script for setting up jenkins master:
+********************************************
+
+#!/bin/bash
+
+# Update from OS install
+apt-get update -y
+
+# Common utilities
+apt-get install -y nano zip unzip wget curl git
+
+# Install Java 8
+apt-get install -y openjdk-8-jdk openjdk-8-jdk-headless
+
+# install Maven
+MVN_VER=3.5.4
+
+cd /usr/local
+wget http://www-us.apache.org/dist/maven/maven-3/$MVN_VER/binaries/apache-maven-$MVN_VER-bin.tar.gz
+tar -xvzf apache-maven-$MVN_VER-bin.tar.gz
+ln -s apache-maven-$MVN_VER maven
+chown -R root.root apache-maven-$MVN_VER
+chmod 755 apache-maven-$MVN_VER
+ln -s maven/bin/mvn bin/mvn
+
+# install Jenkins
+cd
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+cd /etc/apt/sources.list.d
+echo "deb https://pkg.jenkins.io/debian-stable binary/" >> jenkins.list
+apt-get update -y
+apt-get install -y jenkins
+
+systemctl start jenkins
+systemctl enable jenkins
+
+apt-get install -y nginx
+
+# remove default symlink
+cd /etc/nginx/sites-enabled
+rm default
+
+cd /etc/nginx/conf.d
+wget https://raw.githubusercontent.com/jenkins-training/jenkins-bootcamp-course/master/aws/lightsail/lightsail-jenkins.conf
+
+systemctl restart nginx
+systemctl enable nginx
+
+**********************************************************************************************************************************
+
+> Create a lightsail simple ubuntu instance using the above script 
+Note: Under the hoods, AWS uses cloud-init system to run our launch script. Check for cloud-init-output file under /var/log for all commands specified during launch time. 
+
+> Create static ip for the above instance using Networking option 
+> Modify the /etc/hosts file with the staticIp and name
+> Access the instance with either staticIP or name using the below command: 
+  ssh ec2-user@54.188.177.165 -i ~/.ssh/aws-lightsail-jenkins-master.key
+> Modify the config file in .ssh as below for easier access to the instance: 
+  Host build.jenkins.training
+       User ec2-user
+       IdentityFile ~/.ssh/aws-lightsail-jenkins-master.key
+> After the above step, you can access the instance in a simple way as below: 
+  ssh ec2-user@54.188.177.165       or  ssh ec2-user@build.jenkins.training
+> Make sure Java. Mavne and Jenkins are properly installed in the instance by checking the log file cloud-init-output file under /var/log
+> Now, access the Jenkins server from browser using the hostname (build.jenkins.training)
+
+
+https://github.com/devlauer/jenkins-keycloak-plugin/issues/2
+
+sudo systemctl stop jenkins
+ sudo vi /var/lib/jenkins/config.xml
+
+ <useSecurity>
+
+ sudo systemctl status jenkins
+
+ sudo systemctl start jenkins
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+0424daecfd4a423bbbe75229e104eebd
+1bdd4af2cb854f9eba6d23a2c49f4e13
+ 
+
+
+ http://abhijitkakade.com/2019/06/how-to-reset-jenkins-admin-users-password/
+
+
+curl -v -X GET http://localhost:8080/crumbIssuer/api/json --user admin:1cd22f75e803409581f8e4b6e6ac516f
+
+curl -v -X GET http://localhost:8080/crumbIssuer/api/json --user admin
+
+curl -v -X GET http://localhost:8080/asynchPeople/api/xml?depth=1 --user admin:112d79961068c5e34c92fb27c23ad346f2
+
+
+curl -X POST http://localhost:8080/job/<job-name>/build --user admin -H 'Jenkins-Crumb: 65877acc0667e243f15908dd8883dc8eae810dcd398ad1c3e09fe0acfef717b8'
+
+curl -iv -X POST --user admin:1cd22f75e803409581f8e4b6e6ac516f  http://localhost:8080/
+--password 1cd22f75e803409581f8e4b6e6ac516f
+
+1bdd4af2cb854f9eba6d23a2c49f4e13
+
+
+apitoken : 112d79961068c5e34c92fb27c23ad346f2
+
+
+
+curl -iv -u admin -k "http://localhost:8080/"
+
+*****************************************************************************************************************************************************************
+Setting up secure Jenkins server
+************************************************************
+Make sure to take a snapshot from previous one and then create new instance from that snapshot and use the new secure-jenkins.sh 
+
+ssh-keygen -R malathi.vangeepuram.org
+ssh malathi.vangeepuram.org
+sudo su -l
+cd /var/www
+cd /etc/nginx/sites-available 
+vi  jenkins-secured.conf [Replace server name]
+Restart nginx
+certbot certonly --webroot -w /var/www/jenkins/ -d malathi.vangeepuram.org 
+cd /etc/letsencrypt/live [Location of certificate]
+systemctl stop nginx
+nano jenkins.secured.conf 
+Uncomment the SSL certs and also use the path given by certbot and use the correct server name 
+nginx -t 
+systemctl start nginx.service
+*******************************************************************************************************
+
+Scaling Jenkins in AWS light Scaling
+************************************
