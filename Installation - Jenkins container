@@ -1,6 +1,6 @@
 Spin up a ubuntu machine in digital ocean / any other cloud of your choice 
 Log in to the instance 
-wget https://github.com/wardviaene/jenkins-course/blob/master/scripts/install_jenkins.sh  or do a git clone 
+wget https://github.com/wardviaene/jenkins-course/blob/master/scripts/install_jenkins.sh  or do a git clone. Note: Take the raw from github.
 chmod +x install_jenkins.sh
 ./install_jenkins.sh 
 Access the jenkins url and provide the admin password from the location: /var/jenkins_home/secrets/initialAdminPassword
