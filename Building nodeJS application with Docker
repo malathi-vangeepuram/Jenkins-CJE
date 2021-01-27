@@ -8,4 +8,10 @@ docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v
   
 The above image will create jenkins container with docker CLI 
 Create a new free style job with the below setttings: 
+ git: https://github.com/wardviaene/docker-demo/
+ Build: Execute shell with the command npm install
+ Build environment : Provide node & NPM path
+ Docker build and publish: Provide the repository name (Make sure the repo exists in the hub) and creds.
+Save and build the job  
+ 
  
