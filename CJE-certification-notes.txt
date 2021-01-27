@@ -99,7 +99,7 @@ cd /var/www
 cd /etc/nginx/sites-available 
 vi  jenkins-secured.conf [Replace server name]
 Restart nginx
-certbot certonly --webroot -w /var/www/jenkins/ -d malathi.vangeepuram.org 
+certbot certonly --webroot -w /var/www/jenkins/ -d <domain name> 
 cd /etc/letsencrypt/live [Location of certificate]
 systemctl stop nginx
 nano jenkins.secured.conf 
