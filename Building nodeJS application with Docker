@@ -13,5 +13,8 @@ Create a new free style job with the below setttings:
  Build environment : Provide node & NPM path
  Docker build and publish: Provide the repository name (Make sure the repo exists in the hub) and creds.
 Save and build the job  
+
+Go to host machine -> pull the image 
+docker run -p 3000:3000 -d --name my-nodejs-app <repo name>
  
  
