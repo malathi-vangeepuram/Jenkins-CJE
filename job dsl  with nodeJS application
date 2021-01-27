@@ -1,0 +1,5 @@
+Go to Jenkins -> Install job DSL plugin -> Restart jenkins 
+Create a free style project with the below settings: 
+ git: https://github.com/wardviaene/jenkins-course
+ Build: Process job DSL and provide the location on file system
+ 
