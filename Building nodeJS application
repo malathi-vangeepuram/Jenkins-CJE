@@ -1,0 +1,9 @@
+Go to Jenkins UI
+Install nodeJS plugin which has NPM in built.
+Restart Jenkins 
+Go to -> Manage Jenkins -> Global tool configuration -> Add NodeJS
+Create a new Free style job with the below settings: 
+ git: https://github.com/wardviaene/docker-demo/
+ Build: Execute shell with the command npm install
+ Build environment : Provide node & NPM path
+Save and build the job  
