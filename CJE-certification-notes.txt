@@ -62,7 +62,7 @@ Note: Under the hoods, AWS uses cloud-init system to run our launch script. Chec
 > Create static ip for the above instance using Networking option 
 > Modify the /etc/hosts file with the staticIp and name
 > Access the instance with either staticIP or name using the below command: 
-  ssh ec2-user@54.188.177.165 -i ~/.ssh/aws-lightsail-jenkins-master.key
+  ssh ec2-user@IP -i ~/.ssh/aws-lightsail-jenkins-master.key
 > Modify the config file in .ssh as below for easier access to the instance: 
   Host build.jenkins.training
        User ec2-user
