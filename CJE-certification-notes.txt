@@ -138,6 +138,14 @@ Pausable: Pipelines can optionally stop and wait for human input or approval bef
 Versatile: Pipelines support complex real-world CD requirements, including the ability to fork/join, loop, and perform work in parallel.
 Extensible: The Pipeline plugin supports custom extensions to its DSL footnote:dsl:[] and multiple options for integration with other plugins.
 
+A Pipeline is a user-defined model of a CD pipeline. A Pipeline’s code defines your entire build process, which typically includes stages for building an application, testing it and then delivering it.
+A Pipeline’s code defines your entire build process, which typically includes stages for building an application, testing it and then delivering it.
+A pipeline block is a key part of Declarative Pipeline syntax.
+A node block is a key part of Scripted Pipeline syntax.
+A stage block defines a conceptually distinct subset of tasks performed through the entire Pipeline 
+Step: A single task
+
+
 
 
 
