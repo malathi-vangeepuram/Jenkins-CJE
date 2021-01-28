@@ -116,5 +116,7 @@ Job DSL and pipelines both have the capability to write CI/CD in code
 Job DSL creates new jobs based on your code whereas jenkins pipeline is a job type that will handle the build/test/deployment of one project.
 You can use job DSL's to create new pipeline jobs.
 Organization folder feature of jenkins pipeline: Detects changes in project repos and removes the need to create new jobs.
-You can choose to write pipelines in job DSL (declarative pipeline) or in groovy (Scripted pipeline)
+You can choose to write pipelines in job DSL (declarative pipeline) or in groovy (Scripted pipeline).
+
+
 
