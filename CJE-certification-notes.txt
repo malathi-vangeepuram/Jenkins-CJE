@@ -118,5 +118,12 @@ You can use job DSL's to create new pipeline jobs.
 Organization folder feature of jenkins pipeline: Detects changes in project repos and removes the need to create new jobs.
 You can choose to write pipelines in job DSL (declarative pipeline) or in groovy (Scripted pipeline).
 
+Jenkins pipeline components: 
+**********************
+Node: Which jenkins worker node the job will run.
+def: Allows you to declare variables
+Stage: defines building stage : build , test, deploy 
+
+
 
 
