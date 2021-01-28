@@ -33,14 +33,6 @@ ln -s maven/bin/mvn bin/mvn
 
 # install Jenkins
 cd
-
-Pipelines:
-*************
-Jenkins pipelines allows you to write jenkins build steps in code.
-Build steps allow you to write build, test, deploy in code 
-Job DSL and pipelines both have the capability to write CI/CD in code 
-Job DSL creates new jobs based on your code whereas jenkins pipeline is a job type that will handle the build/test/deployment of one project.
-
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 cd /etc/apt/sources.list.d
 echo "deb https://pkg.jenkins.io/debian-stable binary/" >> jenkins.list
@@ -116,5 +108,10 @@ nginx -t
 systemctl start nginx.service
 *******************************************************************************************************
 
-Scaling Jenkins in AWS light Scaling
-************************************
+Pipelines:
+*************
+Jenkins pipelines allows you to write jenkins build steps in code.
+Build steps allow you to write build, test, deploy in code 
+Job DSL and pipelines both have the capability to write CI/CD in code 
+Job DSL creates new jobs based on your code whereas jenkins pipeline is a job type that will handle the build/test/deployment of one project.
+
