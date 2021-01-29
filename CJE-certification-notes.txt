@@ -199,7 +199,8 @@ pipeline {
 
 
 *********************************************
-
+Jenkins pipeline with nodeJS and docker
+*********************************************
 node {
    def commit_id
    stage('Preparation') {
