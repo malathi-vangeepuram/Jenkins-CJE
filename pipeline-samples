@@ -78,4 +78,30 @@ pipeline {
     }
 }
 
+Example 4:  Stages, Declarative Pipeline
+
+pipeline {
+    agent any
+    stages { 
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+Example 5: Single Step, Declarative Pipeline
+
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps { 
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
   
