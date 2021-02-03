@@ -1,0 +1,141 @@
+Jenkins pipelines:
+***************
+Jenkins Pipeline (or simply "Pipeline" with a capital "P") is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins.
+The definition of a Jenkins Pipeline is written into a text file (called a Jenkinsfile) which in turn can be committed to a project’s source control repository. 
+
+Creating a Jenkinsfile and committing it to source control provides a number of immediate benefits:
+Automatically creates a Pipeline build process for all branches and pull requests.
+Code review/iteration on the Pipeline (along with the remaining source code).
+Audit trail for the Pipeline.
+Single source of truth [3] for the Pipeline, which can be viewed and edited by multiple members of the project.
+
+A Jenkinsfile can be written using two types of syntax - Declarative and Scripted.
+
+Features of pipelines:
+Code: Pipelines are implemented in code and typically checked into source control, giving teams the ability to edit, review, and iterate upon their delivery pipeline.
+Durable: Pipelines can survive both planned and unplanned restarts of the Jenkins controller.
+Pausable: Pipelines can optionally stop and wait for human input or approval before continuing the Pipeline run.
+Versatile: Pipelines support complex real-world CD requirements, including the ability to fork/join, loop, and perform work in parallel.
+Extensible: The Pipeline plugin supports custom extensions to its DSL footnote:dsl:[] and multiple options for integration with other plugins.
+
+A Pipeline is a user-defined model of a CD pipeline. A Pipeline’s code defines your entire build process, which typically includes stages for building an application, testing it and then delivering it.
+A Pipeline’s code defines your entire build process, which typically includes stages for building an application, testing it and then delivering it.
+A pipeline block is a key part of Declarative Pipeline syntax.
+A node block is a key part of Scripted Pipeline syntax.
+A stage block defines a conceptually distinct subset of tasks performed through the entire Pipeline 
+Step: A single task
+
+Jenkinsfile (Declarative Pipeline)
+*********************
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                // 
+            }
+        }
+        stage('Test') { 
+            steps {
+                // 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                // 
+            }
+        }
+    }
+}
+
+Jenkinsfile (Scripted Pipeline)
+node {  
+    stage('Build') { 
+        // 
+    }
+    stage('Test') { 
+        // 
+    }
+    stage('Deploy') { 
+        // 
+    }
+}
+
+
+Examples:
+********
+
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent any 
+    stages {
+        stage('Stage 1') {
+            steps {
+                echo 'Hello world!' 
+            }
+        }
+    }
+}
+
+
+*********************************************
+Jenkins pipeline with nodeJS and docker
+*********************************************
+https://github.com/wardviaene/docker-demo/
+
+node {
+   def commit_id
+   stage('Preparation') {
+     checkout scm
+     sh "git rev-parse --short HEAD > .git/commit-id"                        
+     commit_id = readFile('.git/commit-id').trim()
+   }
+   stage('test') {
+     nodejs(nodeJSInstallationName: 'nodejs') {
+       sh 'npm install --only=dev'
+       sh 'npm test'
+     }
+   }
+   stage('docker build/push') {
+     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+       def app = docker.build("mvangeepuram/nodejs:${commit_id}", '.').push()
+ 
+   }
+   }
+}
+
+Build, test and run everything in docker:
+***********************************************
+https://github.com/wardviaene/docker-demo/
+
+node {
+   def commit_id
+   stage('Preparation') {
+     checkout scm
+     sh "git rev-parse --short HEAD > .git/commit-id"
+     commit_id = readFile('.git/commit-id').trim()
+   }
+   stage('test') {
+     def myTestContainer = docker.image('node:4.6')
+     myTestContainer.pull()
+     myTestContainer.inside {
+       sh 'npm install --only=dev'
+       sh 'npm test'
+     }
+   }
+   stage('test with a DB') {
+     def mysql = docker.image('mysql').run("-e MYSQL_ALLOW_EMPTY_PASSWORD=yes") 
+     def myTestContainer = docker.image('node:4.6')
+     myTestContainer.pull()
+     myTestContainer.inside("--link ${mysql.id}:mysql") { // using linking, mysql will be available at host: mysql, port: 3306
+          sh 'npm install --only=dev' 
+          sh 'npm test'                     
+     }                                   
+     mysql.stop()
+   }                                     
+   stage('docker build/push') {            
+     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+       def app = docker.build("wardviaene/docker-nodejs-demo:${commit_id}", '.').push()
+     }                                     
+   }                                       
+}                                          
