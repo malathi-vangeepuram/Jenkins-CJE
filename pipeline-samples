@@ -110,7 +110,7 @@ Pre-requisites:
 
 Spin a ubuntu instance in digital ocean 
 
-wget https://github.com/malathi-vangeepuram/jenkins-course/blob/master/scripts/install_jenkins.sh
+wget https://raw.githubusercontent.com/malathi-vangeepuram/jenkins-course/master/scripts/install_jenkins.sh
 chmod +x install_jenkins.sh
 ./install_jenkins.sh
 
