@@ -129,6 +129,8 @@ Manage Jenkins -> Manage credentials -> Add docker (ID: docker) and github (ID: 
 
 Create a new pipeline job -> pipeline script from SCM -> provide git link: https://github.com/malathi-vangeepuram/docker-demo and script path: misc/Jenkinsfile
 
+Build the job
+
 
 node {
    def commit_id
