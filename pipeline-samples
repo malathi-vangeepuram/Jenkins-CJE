@@ -110,6 +110,10 @@ Pre-requisites:
 
 Spin a ubuntu instance in digital ocean 
 
+wget https://github.com/malathi-vangeepuram/jenkins-course/blob/master/scripts/install_jenkins.sh
+chmod +x install_jenkins.sh
+./install_jenkins.sh
+
 git clone https://github.com/malathi-vangeepuram/jenkins-docker.git
 cd jenkins-docker 
 docker build -t jenkins-docker .
