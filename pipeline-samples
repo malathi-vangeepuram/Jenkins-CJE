@@ -113,6 +113,8 @@ Spin a ubuntu instance in digital ocean
 wget https://raw.githubusercontent.com/malathi-vangeepuram/jenkins-course/master/scripts/install_jenkins.sh
 chmod +x install_jenkins.sh
 ./install_jenkins.sh
+docker stop jenkins 
+docker rm jenkins 
 
 git clone https://github.com/malathi-vangeepuram/jenkins-docker.git
 cd jenkins-docker 
