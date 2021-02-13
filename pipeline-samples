@@ -106,6 +106,8 @@ pipeline {
 
 Example 6:
 
+https://github.com/wardviaene/docker-demo.git
+
 node {
    def commit_id
    stage('Preparation') {
