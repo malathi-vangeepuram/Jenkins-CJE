@@ -123,6 +123,8 @@ docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v
 
 Login to Jenkins and install plugins nodeJS,docker pipeline, cloud bees docker build and publish
 
+Global tool configuration -> Add nodeJS and docker installations (provide the path as /usr/bin)
+
 
 node {
    def commit_id
