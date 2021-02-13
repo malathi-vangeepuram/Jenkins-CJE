@@ -125,6 +125,8 @@ Login to Jenkins and install plugins nodeJS,docker pipeline, cloud bees docker b
 
 Global tool configuration -> Add nodeJS and docker installations (provide the path as /usr/bin)
 
+Manage Jenkins -> Manage credentials -> Add docker (ID: docker) and github (ID: github) credentials 
+
 Create a new pipeline job -> pipeline script from SCM -> provide git link: https://github.com/malathi-vangeepuram/docker-demo and script path: misc/Jenkinsfile
 
 
