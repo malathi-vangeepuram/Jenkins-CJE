@@ -1,1 +1,32 @@
+1. By definition, what does a Continuous Delivery pipeline consist of?
+a. Backlog items
+b. Artifacts
+c. Stages
+d. Tickets
+e. Commitments
 
+2. You need to execute a shell script (/usr/bin/prepare-env) just before a Linux agent is started. How do you achieve this?
+a. Use the "Suffix Start Agent Command" configuration option on the agent configuration.
+b. Use the "Prefix Start Agent Command" configuration option on the agent configuration.
+c. Configure a .profile file containing a call to /usr/bin/prepare-env in the home directory of the OS user which runs the agent
+process.
+d. Add a shell step to each Job tied to this agent to execute the shell script.
+
+3. Suppose you are asked to obtain the config.xml of a folder (myFolder) from a script or HTTP client using the Jenkins Remote
+API. The folder exists at the root of a Jenkins master. Which URL pattern is correct for obtaining this configuration file?
+a. root/job/myFolder/config.xml
+b. root/folder/myFolder/config.xml
+c. root/myFolder/config.xml
+d. root/myFolder?param=config.xml
+e. root/api/getConfig?source=myFolder
+
+4. What architecture is recommended by the Jenkins Cookbook for a scalable Jenkins environment?
+a. Distributed Builds Architecture
+b. Central Master Architecture
+c. Automatic Builds Architecture D. Manual Polling Architecture E. One-Shot Build Architecture
+
+5. In a Cluster Operations Job, which THREE of the following steps can be applied to a Client Master only?
+a. Install Jenkins
+b. Upgrade Jenkins
+c. Upgrade all plugins D. Install plugin
+d. Uninstall Jenkins
