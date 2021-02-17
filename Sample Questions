@@ -147,7 +147,15 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
         c. In JENKINS_HOME/JOB/JOB_NAME/job_config.xml file
         d. You need to define the exact path in the repo where the jenkinsfile is located using the env variable $JOB_PATH
         
-     20.    
+     20. I have created a free style job that has few build steps. For ex one step builds a dot net code into a dll with all dependencies and packages 
+         into an artifact. In the build process, where exactly is this step executed for a distributed build architecture. 
+         a. Build steps are always executed in the master jenkins node.
+         b. The location should be inputted as an input parameter in the job and based on that appropriate build location is determined. 
+         c. In JENKINS_HOME in the agent/slave node. 
+         d. Build steps are run as specified in the job, in the project workspace on executing build agent / node. Master jenkins node is not 
+            leveraged for any build activity. 
+            
+            
            
        
        
