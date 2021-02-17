@@ -56,5 +56,13 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
     c. Use build promotion plugin. Put in a place a criteria / process to identify good builds and subsequently promote them. 
     d. This default feature of jenkins. You do not need to do anything extra to enable this. 
     
+  9. Your company started with jenkins for a single, small project and now wants to use for 100s of medium to big size projects. 
+     As of now you only have 1 server running jenkins. What can you do achieve this high scale. 
+     a. Add  more jenkins masters to the set up. Enable load balancing. Each master will consume a portion of the input load. 
+     b. Enable jenkins system configuration 'HA'. As soon as you do this, jenkins will automatically scale up/down as per the requirement.
+     c. There is no way to do this in jenkins. Only option is to scale up jenkins VM meaning add more CPU/RAM to it. 
+     d. Add as many agent/slave nodes as needed. Make sure there are no builds running in jenkins master. Scale up jenkins master if needed,
+        but first scale out jenkins slaves. 
+     e. Create separate jenkins cluster and use cloudbees jenkins operation center to manage them.    
    
    
