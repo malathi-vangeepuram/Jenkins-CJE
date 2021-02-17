@@ -155,6 +155,36 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
          d. Build steps are run as specified in the job, in the project workspace on executing build agent / node. Master jenkins node is not 
             leveraged for any build activity. 
             
+      21. What is advantage of using jenkins new pipeline mode instead of old free style  job pattern ?
+          a. Free style jobs have been deprecated since jenkins 2.1.1, so oving forward you have use only pipeline syntax. 
+          b. You can express your pipeline steps using code and save them in SCM which enables tracking,  version control and easy roll back. 
+          c. Free style jobs are slower and new pipeline syntax is faster. 
+          d. Freestyle jobs are still preferred way. Pipelines are only suitable for a few limited , niche use cases. 
+          
+       22. Which of the following about jenkins installation is correct? 
+           a. Jenkins does not support installation using containerisation platforms like docker 
+           b. Jenkins master can only be run on windoes and not in unix 
+           c. Jenkins installation has no dependency on java , the only pre-req id python
+           d. Jenkins can be installed in a stand alone mode, where jenkins leverages built in servlet container/ application server jetty. 
+           
+       23. You need to perform a basic testing  of you application functionality before releasing it to your dedciated test teams for exhaustive testing.
+           whats is this called ? 
+           a. Unit testing 
+           b. Smoke testing 
+           c. Pyramid testing
+           d. Integration testing 
+           e. User acceptance testing
+           
+        24. A colleague had initiated jenkins installation and left in between. You have now been handed over the mantle to finish the set up. You can see that 
+            the installation is finished, but you have no idea how to login. Where can you find the password details? 
+            a. Jenkins password need to be inputted during installation and cannot be recovered after that.
+            b. Jenkins default password is P@ssword. 
+            c. Password is usually stored in /var/lib/jenkins/home/secrets/initialAdminPassword 
+            d. Jenkins does not need password for the initial set up. It uses SSH keypair for initial authentication and is password less as such. 
+            
+        25.     
+           
+            
             
            
        
