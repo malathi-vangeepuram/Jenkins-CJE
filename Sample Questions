@@ -182,7 +182,20 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
             c. Password is usually stored in /var/lib/jenkins/home/secrets/initialAdminPassword 
             d. Jenkins does not need password for the initial set up. It uses SSH keypair for initial authentication and is password less as such. 
             
-        25.     
+        25.  Your build pipline produces build artifacts like dlls/jars. How can you preserve these files for future reference / to download later.
+             a. Enable artifact repository plugin. 
+             b. Enable artifact fingerprint option. 
+             c. Add a post build step to archive artifacts. Archived files will be accessible from jenkins webpage. 
+             d. Use promoted builds plugin.
+             
+         26. A new developer has joined your team. This team has a folder o your jenkins server that uses project based matrix security. You are told that 
+             the new employee cannot see the folder once they have logged in. Global permissions are set to allow authenticated users read access at both 
+             the overall context and the job context, what is the most likely cause. 
+             
+             a. The user needs to be explicitly added to the authenticated users group. 
+             b. The folder permissions need to be explicitly configured to allow authenticated user access. 
+             c. The folder permission is configured to disable global inheritance and the user does not have explicit read access to the concerned folder. 
+             d. The global user setiings need to be modified to allow anyone access to anything. 
            
             
             
