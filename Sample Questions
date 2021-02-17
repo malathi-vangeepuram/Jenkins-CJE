@@ -30,3 +30,6 @@ a. Install Jenkins
 b. Upgrade Jenkins
 c. Upgrade all plugins D. Install plugin
 d. Uninstall Jenkins
+
+6. A lot of things in jenkins can be automated or customized using groovy scripts. If a jenkins operator writes a jenkins 
+   script, is it guaranteed that it will always run in the jenikins environment or does it need further approval ?
