@@ -128,6 +128,12 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
         what. what should be your response to the security team. 
         
         a. Ensure them that is available by default, of the box in jenkins. Share them the audit log 
+        b. Mention that this is not possible in jenkins.  Only way is to control security via matrix based security but cannot pin point who did what. 
+        c. Ensure them that auditing per user action is not needed as JENKINS_HOME has been completely locked down and only administrators can access it. 
+        d. Install jenkins audit trail plugin. set up a logger sink to output all audit logs to either a file /console/syslog...and finally share the audit logs 
+           to audit team for future audits. 
+           
+           
        
        
        
