@@ -39,4 +39,22 @@ c. All groovy scripts will by default run in groovy sandbox, provided they are t
    be approved explicitly by administrators using in-process script approval. 
 d. Yes, it will be allowed only for authenticated users. Anonymous users cannot run groovy scripts. 
 e. All groovy scripts need to be approved, no matter how simple/safe they are deemed to be. Without approval, nothing would be allowed. 
+
+7. The new CTO of your company boosts that in his earlier company they used to follow the practice of maintaining code in such a way that 
+   it could be put into production any time. This would enable them to deploy code as soon as somebody requests it. In devops, what is it 
+   referred to as ? 
+   a. Continuous Integration
+   b. This is not possible at all
+   c. Continuous deployment 
+   d. Continuous delivery
+   e. This is basic essence of devops and happens by default in every organization. There is no label to it as such.
+   
+ 8. You want to ensure that you are able to quickly distinguish between builds that are of high quality and builds that are not at par.
+    This would enable you to push the builds into the next stage in your process (For ex Dev- > QA -> prod). What should you do? 
+    a. Manually track all builds. Keep a tracker to identify high quality builds. 
+    b. Enable email notificaion for failed builds. If a build fails, developer will know that the build is not of high quality 
+    c. Use build promotion plugin. Put in a place a criteria / process to identify good builds and subsequently promote them. 
+    d. This default feature of jenkins. You do not need to do anything extra to enable this. 
+    
+   
    
