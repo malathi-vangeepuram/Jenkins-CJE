@@ -63,6 +63,24 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
      c. There is no way to do this in jenkins. Only option is to scale up jenkins VM meaning add more CPU/RAM to it. 
      d. Add as many agent/slave nodes as needed. Make sure there are no builds running in jenkins master. Scale up jenkins master if needed,
         but first scale out jenkins slaves. 
-     e. Create separate jenkins cluster and use cloudbees jenkins operation center to manage them.    
+     e. Create separate jenkins cluster and use cloudbees jenkins operation center to manage them.   
+     
+  10. Your CTO has instructed you to find a easy and simple solution to back up all jenkins instances in your environment. It needs to be cost effective.
+      but the main focus is to easily implement it. 
+      
+      a. Simply back up JENKINS_HOME directory. It has enough info to restore jenkins to a new compute instance. 
+      b. There is no simple way as such. Only way is to take the disk / data snapshot of the VM. 
+      c. Simply copy/backup config.xml file, rest is redundant and is downloaded from jenkins cloud master set up, at boot up. 
+      d. Enable jenkins replication. This feature of jenkins using which youncan very easily replicate the data and config from one 
+         jenkins master to another. 
+         
+  11. Why should you not run builds in jenkins master 
+      a. Running buiklds in jenkins master is costlier than running in slave nodes, as master should always use SSD disks, while slaves us HDD disks.
+      b. Due to how jenkins is architectured, you must have atleast 1 executor in the master node. Otherwise, your application  will not in jenkins slave also. 
+      c. This is a complete incorrect statement. Master slave mode in jenkins was created to ensure that builds run on master node and slave stores the artifacts.
+      d. Running jobs in master can be security concern, as your jobs have access to JENKINS_HOME directory, effectively enabling them to delete/modify/create update 
+         jenkins which is not a good situation to be in. 
+         
+     
    
    
