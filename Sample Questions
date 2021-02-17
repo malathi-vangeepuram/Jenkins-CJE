@@ -141,6 +141,13 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
         c. Executors are not set at VM/Master/Agent level. Rather they are set at pipeline level, so you have to specify the no of executors when you create a pipeline. 
         d. Default no of executors is 5 and you cannot change later on. 
            
+    19. In a multi branch pieline, where are different pipeline build steps located? 
+        a. In the job configuration page. 
+        b. In the jenkins file located in repo branches. 
+        c. In JENKINS_HOME/JOB/JOB_NAME/job_config.xml file
+        d. You need to define the exact path in the repo where the jenkinsfile is located using the env variable $JOB_PATH
+        
+     20.    
            
        
        
