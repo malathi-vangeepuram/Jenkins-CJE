@@ -33,3 +33,10 @@ d. Uninstall Jenkins
 
 6. A lot of things in jenkins can be automated or customized using groovy scripts. If a jenkins operator writes a jenkins 
    script, is it guaranteed that it will always run in the jenikins environment or does it need further approval ?
+a. Yes, any groovy script written will always run in jenkins environment, provided user has build permissions on a pipeline.   
+b. Script will be allowed to run, provided developer is using scriped pipeline methodology.
+c. All groovy scripts will by default run in groovy sandbox, provided they are trusted or safe. Any untrusted script needs to 
+   be approved explicitly by administrators using in-process script approval. 
+d. Yes, it will be allowed only for authenticated users. Anonymous users cannot run groovy scripts. 
+e. All groovy scripts need to be approved, no matter how simple/safe they are deemed to be. Without approval, nothing would be allowed. 
+   
