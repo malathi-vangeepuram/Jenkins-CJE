@@ -133,6 +133,14 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
         d. Install jenkins audit trail plugin. set up a logger sink to output all audit logs to either a file /console/syslog...and finally share the audit logs 
            to audit team for future audits. 
            
+    18. A jenkins executor is one of the basic building blocks which allow a build to run on a node/agent. Think of jenkins executor as a single process ID that 
+        jenkins executes on your machine to run a build. What is the default no of executors available in jenkins master 
+        
+        a. Default no of executors is 2. You can always change this laster on. 
+        b. This is dependent on setting you initially use during jenkins installation what ever value you put there is the default executor count. 
+        c. Executors are not set at VM/Master/Agent level. Rather they are set at pipeline level, so you have to specify the no of executors when you create a pipeline. 
+        d. Default no of executors is 5 and you cannot change later on. 
+           
            
        
        
