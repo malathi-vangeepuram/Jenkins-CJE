@@ -81,6 +81,61 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
       d. Running jobs in master can be security concern, as your jobs have access to JENKINS_HOME directory, effectively enabling them to delete/modify/create update 
          jenkins which is not a good situation to be in. 
          
+  12. You have a distributed build team, with developers across the spectrum working on variety of topics. This sometimes resulting in confusion as to what artifact output
+      from one build pipeline is being used / leveraged in the subsequent build/test/release pipeline. What can be used to ensure that you can keep a track of what version 
+      of a file / artifact  is being used in a build / pipeline job? 
+      a. Build promotion can be used to track artifact usage across builds. 
+      b. You need to store artifacts in github and version control them to understand their usage patterns and come up with conclusions. 
+      c. This is not possible in jenkins, you need to write custom groovy extesnions for that. 
+      d. You need to fingerprint the artifacts. Then you can very easliy understand what version of artifact is being leveraged in what build number and so
+         effectively allowing dependency tracking in your system .
+         
+  13. In a distributed build architecture for jenkins, what is the best practice regarding Agent / slave jenkins nodes ? 
+  
+      a. There is a hard upper limit of 5 agent nodes per jenkins master node. 
+      b. You should treat jenkins slave nodes as a fungible / replaceable in the sense that they should not store important configuration information that 
+         cannot be recreated within the build process. 
+      c. You should not mix agents of different OS types like windows / linux. It is better to use only one type of agents to keep control of your system. 
+      d. Always use cloud agents. Do not us on-prem agents as they are not that secure / cost effective. 
+      
+   14. If you have a parameterised job which takes 2-3 string parameters as input, how can i leverage those parameters within my job/pipeline code meaning 
+       how do i reference them ? 
+       a. Every string parameter is exposed as an environment variable of the same name, which you can use effectively to reference them. 
+       b. You need to install jenkins string variable plugin to be able to use string parameters, other wise it won't work. 
+       c. All variables you declare can be referenced using a hashmap of values, with key name set to variable name. 
+       d. Actually, string parameters are not supported directly, you need to encode them into files  and then pass them as file parameters. 
+       
+   15. I have a jenkins pipeline that needs a code snippet to run in both windows and linux environment for the build to succeed. How can i accomodate such 
+       a thing in jenkins 
+       a. You need to have 2 separate jenkins master installations, one for windows and one for linux. then you need to split the pipeline to run different 
+          steps in different masters. 
+       b. You can have single master but different slave nodes one for windows and one for linux but still need to split the pipeline into 2 separate pipelines,
+          make one run for windows and other for linux. 
+       c. You can have a single jenkins master but different slave nodes one for windows and one for linux . You dont need to split the pipeline into 2 separate 
+          pipelines , you can simply specify which stage runs on which agent and so on.
+       d. The above is not possible in jenkins. You need to install OSConcurrency plugin to allow different agent VM's to support different OS variants. 
+       
+   16. You have a jenkins distributed build environment set up where the agent VM's are in on-prem (behind the firewall) , while the master is in cloud meaning master 
+       cannot initiate connection to the agents. How to set up master agent communication in such use cases? 
+       
+       a. There is no option as such, for distributed builds the master must be able to initiate communication to agents, there is no other way. 
+       b. You can initiate agent to master communcation via JNLP. It is not always mandatory for master to initiate communication. 
+       c. The only way is to set up jenkins HA cluster with all VM's acting like both master and slave. 
+       d. You have enable all flow initally, then once the master communicates to the agent for the first time, then afterwards you can close up the F/W again 
+          and the flow will still work , once the initial set up is done. 
+          
+   17. Your security team has verified  your jenkins set up and are adamant that you need to set up audit logging to ensure that you can track what user is doing 
+        what. what should be your response to the security team. 
+        
+        a. Ensure them that is available by default, of the box in jenkins. Share them the audit log 
+       
+       
+       
+       
+       
+       
+       
+         
      
    
    
