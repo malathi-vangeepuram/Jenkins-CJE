@@ -29,6 +29,24 @@ Jenkins can store the following types of credentials:
     BUILD ID URL/term - forcibly terminates a build (should only be used if stop does not work).
 
     BUILD ID URL/kill - hard kill a pipeline. This is the most destructive way to stop a pipeline and should only be used as a last resort.
+    
+ Jenkins supports file fingerprinting to track dependencies.
+ 
+ Go to your project, click Configure in the left navigation bar, then scroll down to the Post-build Actions section of the job
+
+    Click on the button to add a Post-build action.
+
+    Select Record fingerprints of files to track usage.
+    
+ Maven job type does this automatically for its dependencies and artifacts.
+ 
+ Fingerprint location: $JENKINS_HOME/fingerprints
+ 
+ Plugins can store additional information with regards to fingerprints. For example, Deployment Notification Plugin tracks files deployed on servers via chef/puppet through fingerprints.
+
+
+
+   
 
 
 
