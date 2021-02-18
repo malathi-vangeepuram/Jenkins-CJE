@@ -22,7 +22,13 @@ Jenkins can store the following types of credentials:
  
  Otherwise, any Jenkins user can add and configure credentials if the Authorization settings of your Jenkins instance’s Configure Global Security settings page is set to the default Logged-in users can do anything setting or Anyone can do anything setting.
 
+ Pipeline jobs can by stopped by sending an HTTP POST request to URL endpoints of a build.
 
+    BUILD ID URL/stop - aborts a Pipeline.
+
+    BUILD ID URL/term - forcibly terminates a build (should only be used if stop does not work).
+
+    BUILD ID URL/kill - hard kill a pipeline. This is the most destructive way to stop a pipeline and should only be used as a last resort.
 
 
 
