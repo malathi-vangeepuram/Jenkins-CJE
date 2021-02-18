@@ -19,6 +19,10 @@ Jenkins can store the following types of credentials:
    Docker Host Certificate Authentication credentials.
    
  Credentials can be added to Jenkins by any Jenkins user who has the Credentials > Create permission (set through Matrix-based security). 
+ 
+ Otherwise, any Jenkins user can add and configure credentials if the Authorization settings of your Jenkins instance’s Configure Global Security settings page is set to the default Logged-in users can do anything setting or Anyone can do anything setting.
+
+
 
 
 
