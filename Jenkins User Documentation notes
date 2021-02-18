@@ -64,6 +64,12 @@ Creating a Jenkinsfile and committing it to source control provides a number of 
 
   Single source of truth [3] for the Pipeline, which can be viewed and edited by multiple members of the project.  
    
+  The Multibranch Pipeline project type enables you to implement different Jenkinsfiles for different branches of the same project.
+  
+  By default, Jenkins will not automatically re-index the repository for branch additions or deletions (unless using an Organization Folder)
+  
+  Organization Folders enable Jenkins to monitor an entire GitHub Organization, Bitbucket Team/Project, GitLab organization, or Gitea organization and automatically create new Multibranch Pipelines for repositories which contain branches and pull requests containing a Jenkinsfile.
+  
 
 
 
