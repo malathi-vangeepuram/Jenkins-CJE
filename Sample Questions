@@ -1,3 +1,5 @@
+Location of InitialAdminPassword: /var/jenkins_home/secrets/initialAdminPassword
+
 1. By definition, what does a Continuous Delivery pipeline consist of?
 a. Backlog items
 b. Artifacts
