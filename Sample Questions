@@ -262,45 +262,46 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
               asked by your manager to do some cleanup by creating some list views. How would you go about
               creating these list views?
               Choose the correct answer:
+              A. Explicitly set projects to view
+              B. Using a regular expression pattern
+              C. Explicitly set recursively in sub-folders
+              D. All of these
+              Answer: D
+              Explanation:
+              You can add projects to list views with all of these options.
+              
+         32. You've just become the administrator for the Jenkins server, and the feedback you've received
+             from the users is they're having trouble locating their jobs to run them. You've determined that
+             folders are the most logical solution and wish to move the jobs into the new folders you've
+             created. How would you accomplish this?
+             Choose the correct answer:
+             A. Click existing item; in the item view page, select "move" on the left panel; select target folder.
+             B. Hover and click arrow on existing item, choose "move", select target folder.
+             C. For new items, click folder; in the folder view, select new item; it will automatically be added to
+                that folder. 
+             D. All of these
+             Answer: D
+             Explanation:
+             All of these options are ways to add projects to folders.
+             
+         33. You need to grant permissions, via matrix-based security, to run a specific command in a
+             Jenkins pipeline. The project parameters will not allow you to create a specific user to run this
+             task, and you have no relevant groups. Which of the following is an option?
+             Choose the correct answer:
+             A. Create a group, add an existing user to the task, and grant permissions to that group
+             B. Set permissions in Jenkins to allow anonymous users to run the command
+             C. Change the workflow to require an existing user to run the task, and assign permissions to
+                that user.
+             D. Either creating a group or reassigning the user will work.
+             Answer: B
+             Explanation:
+             You can set permissions for anonymous users with matrix-based security. Since this requires
+             the least impact on existing workflows, it's the best solution.
+             
+          34. What's the SDLC?
+              Choose the correct answer:   
 
-A. Explicitly set projects to view
-B. Using a regular expression pattern
-C. Explicitly set recursively in sub-folders
-D. All of these
-Answer: D
-Explanation:
-You can add projects to list views with all of these options.
-Question: 6
-You've just become the administrator for the Jenkins server, and the feedback you've received
-from the users is they're having trouble locating their jobs to run them. You've determined that
-folders are the most logical solution and wish to move the jobs into the new folders you've
-created. How would you accomplish this?
-Choose the correct answer:
-A. Click existing item; in the item view page, select "move" on the left panel; select target folder.
-B. Hover and click arrow on existing item, choose "move", select target folder.
-C. For new items, click folder; in the folder view, select new item; it will automatically be added to
-that folder. 
-D. All of these
-Answer: D
-Explanation:
-All of these options are ways to add projects to folders.
-Question: 7
-You need to grant permissions, via matrix-based security, to run a specific command in a
-Jenkins pipeline. The project parameters will not allow you to create a specific user to run this
-task, and you have no relevant groups. Which of the following is an option?
-Choose the correct answer:
-A. Create a group, add an existing user to the task, and grant permissions to that group
-B. Set permissions in Jenkins to allow anonymous users to run the command
-C. Change the workflow to require an existing user to run the task, and assign permissions to
-that user.
-D. Either creating a group or reassigning the user will work.
-Answer: B
-Explanation:
-You can set permissions for anonymous users with matrix-based security. Since this requires
-the least impact on existing workflows, it's the best solution.
-Question: 8
-What's the SDLC?
-Choose the correct answer:
+
 A. Super Digital Life Chain
 B. Sloan Digital Legal Conference
 C. Software Development Life Cycle
