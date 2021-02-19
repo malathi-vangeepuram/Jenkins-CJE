@@ -69,8 +69,8 @@ Creating a Jenkinsfile and committing it to source control provides a number of 
   By default, Jenkins will not automatically re-index the repository for branch additions or deletions (unless using an Organization Folder)
   
   Organization Folders enable Jenkins to monitor an entire GitHub Organization, Bitbucket Team/Project, GitLab organization, or Gitea organization and automatically create new Multibranch Pipelines for repositories which contain branches and pull requests containing a Jenkinsfile.
-  
-
+ 
+ Pipeline is also extensible both by users with Pipeline Shared Libraries and by plugin developers.
 
 
 
