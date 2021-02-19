@@ -197,7 +197,130 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
              a. The user needs to be explicitly added to the authenticated users group. 
              b. The folder permissions need to be explicitly configured to allow authenticated user access. 
              c. The folder permission is configured to disable global inheritance and the user does not have explicit read access to the concerned folder. 
-             d. The global user setiings need to be modified to allow anyone access to anything. 
+             d. The global user setiings need to be modified to allow anyone access to anything.                          
+
+          27. What's not true about a build executor?
+              Choose the correct answer:
+              A. You can run many of them in parallel.
+              B. They can run on the master.
+              C. The default number of executors on a node is 4.
+              D. It runs projects dictated by Jenkins.
+              Answer: C
+              Explanation:
+              The default number of executors on a node is 2.
+              
+         28.  Which menu option do you select to add a pipeline or other project?
+              Choose the correct answer
+              A. Manage Jenkins
+              B. My Views
+              C. New Item
+              D. Credentials
+              Answer: C
+              Explanation:
+              Selecting "New Item" from the dashboard will take you to menu where you can add a new project.
+
+          29. You have taken over a build environment where Jenkins is responsible for scanning for changes
+              made in a Git repository every hour and then applying that build to a few dozen web servers. As
+              part of that job, Jenkins also is responsible for completing some scripted performance-based 
+              tests and, depending on the defined results, marking the build as complete and notifying the
+              team OR rolling back the build, notifying the team, and marking it as failed. You notice that the
+              build itself is now taking longer than an hour to complete, which is affecting the push of new
+              changes on occasion. What changes could you make to your Jenkins environment to alleviate
+              the amount of time it takes to complete and test a build so that the hourly schedule is more
+              likely to be kept?
+              Choose the correct answer: 
+              A. Create additional Jenkins Masters and deploy the job to each one. Schedule the job staggered
+              by 30 minutes on each one so that the additional master servers won’t be busy if the first job
+              runs long.
+              B. Add one or more slave nodes to the environment, this will allow us to deploy code to multiple
+                end points at one time. Break up the single job into multiple jobs so that each one can be
+                triggered by the successful completion of the previous job to eliminate scheduling problems on
+                beginning a new build in the event subsequent steps run longer than the intended time period.
+              C. Remove the performance testing from the build. Schedule performance testing as a separate
+                 job 30 minutes after the build runs and trigger a rollback if the performance testing fails at this point. 
+              D. None of these
+              Answer: B
+              Explanation:
+              As the load of your Jenkins setup expands, you can distribute the burden by adding one or more
+              slave nodes.
+              
+          30. Which answer best describes continuous delivery?
+              Choose the correct answer:
+             A. A software development discipline where software is built so that it can be released to
+                production at any time.
+             B. A software development practice where contributors are integrating their work very
+                frequently.
+             C. Building in 60 minutes or less.
+             D. A software development discipline where software is released continuously as part of an 
+                automated pipeline.
+             Answer: A
+             Explanation:
+             Continuous delivery is an extension of continuous integration. It means that the software CAN
+             be released at any time.
+             
+          31. Over the last six months, a large number of projects have been added to Jenkins. You have been
+              asked by your manager to do some cleanup by creating some list views. How would you go about
+              creating these list views?
+              Choose the correct answer:
+
+A. Explicitly set projects to view
+B. Using a regular expression pattern
+C. Explicitly set recursively in sub-folders
+D. All of these
+Answer: D
+Explanation:
+You can add projects to list views with all of these options.
+Question: 6
+You've just become the administrator for the Jenkins server, and the feedback you've received
+from the users is they're having trouble locating their jobs to run them. You've determined that
+folders are the most logical solution and wish to move the jobs into the new folders you've
+created. How would you accomplish this?
+Choose the correct answer:
+A. Click existing item; in the item view page, select "move" on the left panel; select target folder.
+B. Hover and click arrow on existing item, choose "move", select target folder.
+C. For new items, click folder; in the folder view, select new item; it will automatically be added to
+that folder. 
+D. All of these
+Answer: D
+Explanation:
+All of these options are ways to add projects to folders.
+Question: 7
+You need to grant permissions, via matrix-based security, to run a specific command in a
+Jenkins pipeline. The project parameters will not allow you to create a specific user to run this
+task, and you have no relevant groups. Which of the following is an option?
+Choose the correct answer:
+A. Create a group, add an existing user to the task, and grant permissions to that group
+B. Set permissions in Jenkins to allow anonymous users to run the command
+C. Change the workflow to require an existing user to run the task, and assign permissions to
+that user.
+D. Either creating a group or reassigning the user will work.
+Answer: B
+Explanation:
+You can set permissions for anonymous users with matrix-based security. Since this requires
+the least impact on existing workflows, it's the best solution.
+Question: 8
+What's the SDLC?
+Choose the correct answer:
+A. Super Digital Life Chain
+B. Sloan Digital Legal Conference
+C. Software Development Life Cycle
+D. None of these
+Answer: C 
+Explanation:
+The SDLC is contained in CI/CD concepts.
+Question: 9
+You are working on a project that will build a Docker image. When the job completes it needs to
+trigger a build to deploy a container to your development environment for integration testing.
+How would you go about triggering the second build?
+Choose the correct answer:
+A. Both "Triggered by another project" and the "Parameterized Trigger Plugin"
+B. In the downstream build, you can select "Triggered by another project"
+C. You could use the Parameterized Trigger Plugin to trigger from an upstream project.
+D. Use the run() function passing the downstream projects name from within an upstream
+project build step.
+Answer: A
+Explanation:
+Both are options for triggering upstream and downstream projects.     
            
             
             
