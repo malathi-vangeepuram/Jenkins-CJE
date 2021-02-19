@@ -4,4 +4,18 @@ Suggested / default Plugins list:
  Folders,Timestamper,Pipeline,Git,LDAP,OWASP Markup Formatter,Workspace cleanup,Github branch source,SSH build agents
  Email extension, Build Timeout,Ant, Pipeline Guthub Groovy Libraries,Matrix authorization strategy, Mailer,
  Credentials binding, Gradle, Pipeline:stage view, PAM Authentication
+ 
+ls /var/jenkins_home
 
+config.xml                                      nodes
+copy_reference_file.log                         org.jenkinsci.plugins.workflow.flow.FlowExecutionList.xml
+hudson.model.UpdateCenter.xml                   plugins
+hudson.plugins.git.GitTool.xml                  queue.xml
+identity.key.enc                                secret.key
+jenkins.install.InstallUtil.lastExecVersion     secret.key.not-so-secret
+jenkins.install.UpgradeWizard.state             secrets
+jenkins.model.JenkinsLocationConfiguration.xml  updates
+jenkins.telemetry.Correlator.xml                userContent
+jobs                                            users
+logs                                            war
+nodeMonitors.xml                                workflow-libs
