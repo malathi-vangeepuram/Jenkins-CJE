@@ -1,5 +1,12 @@
 Location of InitialAdminPassword: /var/jenkins_home/secrets/initialAdminPassword
 
+Suggested / default Plugins list: 
+ Folders,Timestamper,Pipeline,Git,LDAP,OWASP Markup Formatter,Workspace cleanup,Github branch source,SSH build agents
+ Email extension, Build Timeout,Ant, Pipeline Guthub Groovy Libraries,Matrix authorization strategy, Mailer,
+ Credentials binding, Gradle, Pipeline:stage view, PAM Authentication
+
+
+
 1. By definition, what does a Continuous Delivery pipeline consist of?
 a. Backlog items
 b. Artifacts
