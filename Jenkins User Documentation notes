@@ -74,5 +74,16 @@ Creating a Jenkinsfile and committing it to source control provides a number of 
  
  Pipeline is also extensible both by users with Pipeline Shared Libraries and by plugin developers.
 
+Blue ocean features: 
+
+Sophisticated visualizations of continuous delivery (CD) Pipelines, allowing for fast and intuitive comprehension of your Pipeline’s status.
+
+Pipeline editor - makes creation of Pipelines approachable by guiding the user through an intuitive and visual process to create a Pipeline.
+
+Personalization to suit the role-based needs of each member of the team.
+
+Pinpoint precision when intervention is needed and/or issues arise. Blue Ocean shows where in the pipeline attention is needed, facilitating exception handling and increasing productivity.
+
+Native integration for branch and pull requests, enables maximum developer productivity when collaborating on code with others in GitHub and Bitbucket.
 
 
