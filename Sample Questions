@@ -300,28 +300,26 @@ e. All groovy scripts need to be approved, no matter how simple/safe they are de
              
           34. What's the SDLC?
               Choose the correct answer:   
-
-
-A. Super Digital Life Chain
-B. Sloan Digital Legal Conference
-C. Software Development Life Cycle
-D. None of these
-Answer: C 
-Explanation:
-The SDLC is contained in CI/CD concepts.
-Question: 9
-You are working on a project that will build a Docker image. When the job completes it needs to
-trigger a build to deploy a container to your development environment for integration testing.
-How would you go about triggering the second build?
-Choose the correct answer:
-A. Both "Triggered by another project" and the "Parameterized Trigger Plugin"
-B. In the downstream build, you can select "Triggered by another project"
-C. You could use the Parameterized Trigger Plugin to trigger from an upstream project.
-D. Use the run() function passing the downstream projects name from within an upstream
-project build step.
-Answer: A
-Explanation:
-Both are options for triggering upstream and downstream projects.     
+              A. Super Digital Life Chain
+              B. Sloan Digital Legal Conference
+              C. Software Development Life Cycle
+              D. None of these
+              Answer: C 
+              Explanation:
+              The SDLC is contained in CI/CD concepts.
+              
+         35. You are working on a project that will build a Docker image. When the job completes it needs to
+             trigger a build to deploy a container to your development environment for integration testing.
+             How would you go about triggering the second build?
+             Choose the correct answer:
+            A. Both "Triggered by another project" and the "Parameterized Trigger Plugin"
+            B. In the downstream build, you can select "Triggered by another project"
+            C. You could use the Parameterized Trigger Plugin to trigger from an upstream project.
+            D. Use the run() function passing the downstream projects name from within an upstream
+               project build step.
+           Answer: A
+           Explanation:
+           Both are options for triggering upstream and downstream projects.     
            
             
             
