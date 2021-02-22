@@ -149,6 +149,8 @@ Activity View for Single Run
 
 Pipeline Run Details
 
+Jenkins can use a TCP port to communicate with inbound (formerly known as “JNLP”) agents, such as Windows-based agents.
+As of Jenkins 2.0, by default this port is disabled.
 
 
 
