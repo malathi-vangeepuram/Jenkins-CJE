@@ -99,4 +99,47 @@ The numbers of BRANCHes and pull requests (PRs) of the Pipeline’s source contr
 
 A star indicating whether or not the default/main branch of the item has been manually added to your current Jenkins user’s Favorites list.
 
+Health icons on the Dashboard represent overall Pipeline health, whereas the health icons in the Branches tab of the Activity View represent the overall health for each branch.
+
+Table 1. Health icons (best to worst)
+Icon	Health
+Sunny
+
+Sunny, more than 80% of Runs passing
+
+Partially Sunny
+
+Partially Sunny, 61% to 80% of Runs passing
+
+Cloudy
+
+Cloudy, 41% to 60% of Runs passing
+
+Raining
+
+Raining, 21% to 40% of Runs passing
+
+Storm
+
+Storm, less than 21% of Runs passing
+
+Run status
+
+Blue Ocean represents the run status of a Pipeline/item or one of its repository’s branches using a consistent set of icons throughout.
+
+Table 2. Run status icons
+
+Status:
+
+In Progress
+
+Passed
+
+Unstable
+
+Failed
+
+aborted
+
+
 
