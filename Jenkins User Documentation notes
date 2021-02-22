@@ -88,5 +88,15 @@ Native integration for branch and pull requests, enables maximum developer produ
 
  Under the hood, a Pipeline project created through Blue Ocean is actually "multibranch Pipeline". Therefore, Jenkins looks for the presence of at least
  one Jenkinsfile in any branch of your repository.
+ 
+ This list shows the overall state of each Pipeline configured on the Jenkins instance (which can also include other Jenkins items). For a given item in this list, the following information is indicated:
+
+The item’s NAME,
+
+The item’s HEALTH,
+
+The numbers of BRANCHes and pull requests (PRs) of the Pipeline’s source control repository which are passing or failing, and
+
+A star indicating whether or not the default/main branch of the item has been manually added to your current Jenkins user’s Favorites list.
 
 
