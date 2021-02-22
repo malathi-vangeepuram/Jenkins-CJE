@@ -156,7 +156,18 @@ Access Control is the primary mechanism for securing a Jenkins environment again
 
 A Security Realm which informs the Jenkins environment how and where to pull user (or identity) information from. Also commonly known as "authentication."
 
+Delegate to servlet container
+Jenkins’ own user database
+LDAP
+Unix user/group database
+
 Authorization configuration which informs the Jenkins environment as to which users and/or groups can access which aspects of Jenkins, and to what extent.
+
+Anyone can do anything
+Legacy mode
+Logged in users can do anything
+Matrix-based security
+Project-based Matrix Authorization Strategy
 
 Role-based Authorization Strategy plugin can extend the Access Control capabilities of Jenkins to support even more nuanced authentication and authorization schemes.
 
