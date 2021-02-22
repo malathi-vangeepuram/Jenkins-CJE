@@ -171,6 +171,6 @@ Project-based Matrix Authorization Strategy
 
 Role-based Authorization Strategy plugin can extend the Access Control capabilities of Jenkins to support even more nuanced authentication and authorization schemes.
 
-
+Matrix-based security and Project-based Matrix Authorization Strategy are provided by the Matrix Authorization Strategy Plugin
 
 
