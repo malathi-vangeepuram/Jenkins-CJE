@@ -86,4 +86,7 @@ Pinpoint precision when intervention is needed and/or issues arise. Blue Ocean s
 
 Native integration for branch and pull requests, enables maximum developer productivity when collaborating on code with others in GitHub and Bitbucket.
 
+ Under the hood, a Pipeline project created through Blue Ocean is actually "multibranch Pipeline". Therefore, Jenkins looks for the presence of at least
+ one Jenkinsfile in any branch of your repository.
+
 
