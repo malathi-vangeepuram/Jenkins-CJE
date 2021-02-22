@@ -152,6 +152,14 @@ Pipeline Run Details
 Jenkins can use a TCP port to communicate with inbound (formerly known as “JNLP”) agents, such as Windows-based agents.
 As of Jenkins 2.0, by default this port is disabled.
 
+Access Control is the primary mechanism for securing a Jenkins environment against unauthorized usage. Two facets of configuration are necessary for configuring Access Control in Jenkins:
+
+A Security Realm which informs the Jenkins environment how and where to pull user (or identity) information from. Also commonly known as "authentication."
+
+Authorization configuration which informs the Jenkins environment as to which users and/or groups can access which aspects of Jenkins, and to what extent.
+
+Role-based Authorization Strategy plugin can extend the Access Control capabilities of Jenkins to support even more nuanced authentication and authorization schemes.
+
 
 
 
