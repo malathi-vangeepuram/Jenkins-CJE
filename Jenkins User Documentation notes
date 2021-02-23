@@ -226,5 +226,31 @@ Login Theme Plugin - allows modifying or replacing the Jenkins login screen. It 
 To configure a theme, you need to first install a theme management plugin and then configure it. Both plugins can be managed in the Jenkins Web UI or
 by the Configuration-as-Code Plugin
 
+System Administration:
+***********************
+
+Datadog plugin for Jenkins
+Metrics-Datadog plugin for Jenkins
+Jenkins on Datadog
+Prometheus plugin for Jenkins
+Versions Node Monitors
+Agents Monitoring for unix nodes
+Job/Queue/Slaves Monitoring
+
+Ping Thread:
+*************
+
+Jenkins installs "ping thread" on every remoting connection, such as controller/agent connections, regardless of its transport mechanism (such as SSH, JNLP, etc.)
+
+The ping thread measures the time it takes for the reply to arrive, and if it’s taking excessive time (currently 4 minutes and configurable), then it assumes that the 
+connection was lost and initiates the formal close down.
+
+Ping thread is installed on both controller & agent; each side pings the other and tries to detect the problem from their own sides.
+
+To disable the controller from pinging agents, the system property hudson.slaves.ChannelPinger.pingInterval should be set on the controller JVM to -1. 
+
+
+
+
 
 
