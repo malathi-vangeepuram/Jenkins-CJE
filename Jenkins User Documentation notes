@@ -149,6 +149,9 @@ Activity View for Single Run
 
 Pipeline Run Details
 
+Managing Security: (Manage Jenkins -> Configure global security)
+*********************
+
 Jenkins can use a TCP port to communicate with inbound (formerly known as “JNLP”) agents, such as Windows-based agents.
 As of Jenkins 2.0, by default this port is disabled.
 
@@ -173,7 +176,6 @@ Role-based Authorization Strategy plugin can extend the Access Control capabilit
 
 Matrix-based security and Project-based Matrix Authorization Strategy are provided by the Matrix Authorization Strategy Plugin
 
-Managing Security: (Manage Jenkins -> Configure global security)
-*********************
+
 
 
