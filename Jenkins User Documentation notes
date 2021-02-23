@@ -181,5 +181,9 @@ Cross Site Request Forgery (CSRF):
 A cross site request forgery (or CSRF/XSRF) [1] is an exploit that enables an unauthorized third party to perform requests against 
 a web application by impersonating another, authenticated, user. 
 
+Agent/Master Access Control:
+
+
+
 
 
