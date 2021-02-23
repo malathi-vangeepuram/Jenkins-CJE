@@ -215,5 +215,15 @@ In-process Script Approval:
 To protect Jenkins from execution of malicious scripts, these plugins execute user-provided scripts in a Groovy Sandbox that limits what internal APIs are accessible.
 This protection is provided by the Script Security plugin.
 
+Themes for user interface:
+*******************
+These are the 2 most popular plugins:
+
+Simple Theme Plugin - allows customizing the Jenkins UI by providing custom CSS and Javascript files. It also supports replacing the Favicon. There are many themes created by Jenkins users.
+
+Login Theme Plugin - allows modifying or replacing the Jenkins login screen. It is required to customize login screens starting from Jenkins 2.128 (announcement).
+
+
+
 
 
