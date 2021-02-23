@@ -210,5 +210,10 @@ Pipeline Classpath Step Plugin Pipeline DSL step to add path to the groovy class
 
 Scriptler Plugin — Scriptler allows you to store/edit groovy scripts and execute it on any of the nodes…​ no need to copy/paste groovy code anymore.
 
+In-process Script Approval: 
+**********************************
+To protect Jenkins from execution of malicious scripts, these plugins execute user-provided scripts in a Groovy Sandbox that limits what internal APIs are accessible.
+This protection is provided by the Script Security plugin.
+
 
 
