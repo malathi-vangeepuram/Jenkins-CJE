@@ -176,6 +176,10 @@ Role-based Authorization Strategy plugin can extend the Access Control capabilit
 
 Matrix-based security and Project-based Matrix Authorization Strategy are provided by the Matrix Authorization Strategy Plugin
 
+Cross Site Request Forgery (CSRF):
+
+A cross site request forgery (or CSRF/XSRF) [1] is an exploit that enables an unauthorized third party to perform requests against 
+a web application by impersonating another, authenticated, user. 
 
 
 
