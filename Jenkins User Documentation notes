@@ -223,7 +223,8 @@ Simple Theme Plugin - allows customizing the Jenkins UI by providing custom CSS 
 
 Login Theme Plugin - allows modifying or replacing the Jenkins login screen. It is required to customize login screens starting from Jenkins 2.128 (announcement).
 
-
+To configure a theme, you need to first install a theme management plugin and then configure it. Both plugins can be managed in the Jenkins Web UI or
+by the Configuration-as-Code Plugin
 
 
 
