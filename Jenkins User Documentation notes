@@ -185,6 +185,11 @@ Agent/Master Access Control:
 
 An administrator may edit Commands and File Access Agent/Master access control rules.
 
+Administrators may also whitelist classes by creating files with the .conf extension in the directory JENKINS_HOME/secrets/whitelisted-callables.d/. The contents of these .conf files should list command names on separate lines.
+
+The contents of all the .conf files in the directory will be read by Jenkins and combined to create a default.conf file in the directory which lists all known safe command. The default.conf file
+will be re-written each time Jenkins boots.
+
 
 
 
