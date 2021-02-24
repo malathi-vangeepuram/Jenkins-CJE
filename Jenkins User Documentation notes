@@ -256,9 +256,23 @@ Access control:
 Security Realm, which determines users and their passwords, as well as what groups the users belong to. ( LDAP/Active Directory/jenkins own database/Unix user group database) 
 Authorization Strategy, which determines who has access to what. ( Logged-in users can do anything/ Matrix-based security/Project-based Matrix Authorization Strategy)
 
+Diagnosing errors:
+*******************
+If your Jenkins started choking with OutOfMemoryError, there are four possibilities.
 
+Your Jenkins is growing in data size, requiring a bigger heap space. In this case you just want to give it a bigger heap.
 
+Your Jenkins is temporarily processing a large amount of data (like test reports), requring a bigger head room in memory. In this case you just want to give it a bigger heap.
 
+Your Jenkins is leaking memory, in which case we need to fix that.
+
+The Operating System kernel is running out of virtual memory.
+
+http://165.232.130.57:8080/threaddump
+
+http://165.232.130.57:8080/computer/master/systemInfo
+
+Api: curl -X POST 'http://localhost:8080/jenkins/job/bis-dx/build' --user '**:***' -H "$CRUMB"
 
 
 
