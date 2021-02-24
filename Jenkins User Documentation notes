@@ -270,9 +270,7 @@ The Operating System kernel is running out of virtual memory.
 
 http://165.232.130.57:8080/threaddump
 
-http://165.232.130.57:8080/computer/master/systemInfo
 
-Api: curl -X POST 'http://localhost:8080/jenkins/job/bis-dx/build' --user '**:***' -H "$CRUMB"
 
 
 
