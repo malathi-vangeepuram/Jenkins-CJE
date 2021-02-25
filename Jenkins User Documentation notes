@@ -268,7 +268,15 @@ Your Jenkins is leaking memory, in which case we need to fix that.
 
 The Operating System kernel is running out of virtual memory.
 
+Obtaining Thread dump:
+*********************
+
 http://165.232.130.57:8080/threaddump
+Try jstack to obtain the thread dump with -F option
+
+If you have a terminal or command prompt that’s running the JVM, you can hit Ctrl+ + (Unix) or Ctrl+Break (Windows) to do this.
+If the JVM is running in background, you do this by kill -3 PID (Unix) or use a tool like this to send a signal (Windows).
+
 
 
 
