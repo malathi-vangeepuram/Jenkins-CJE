@@ -277,7 +277,15 @@ Try jstack to obtain the thread dump with -F option
 If you have a terminal or command prompt that’s running the JVM, you can hit Ctrl+ + (Unix) or Ctrl+Break (Windows) to do this.
 If the JVM is running in background, you do this by kill -3 PID (Unix) or use a tool like this to send a signal (Windows).
 
+The equation for estimating the number of controllers and executors needed when the number of configured jobs is known is as follows:
 
+controllers = number of jobs/500
+executors = number of jobs * 0.03
+The equation for estimating the maximum number of jobs, controllers, and executors needed for an organization based on the number of developers is as follows:
+
+number of jobs = number of developers * 3.333
+number of controllers = number of jobs/500
+number of executors = number of jobs * 0.03
 
 
 
