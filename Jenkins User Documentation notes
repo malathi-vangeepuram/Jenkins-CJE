@@ -287,6 +287,36 @@ number of jobs = number of developers * 3.333
 number of controllers = number of jobs/500
 number of executors = number of jobs * 0.03
 
+Jenkins backup
+*****************************
 
+All of your Jenkins-specific configurations that need to be backed up will live in the $JENKINS_HOME, but it is a best practice to back up only
+a subset of those files and folders.
+
+When it comes to creating a backup, it is recommended to exclude archiving the following folders to reduce the size of your backup:
+
+/war      (the exploded Jenkins war directory)
+/cache    (downloaded tools)
+/tools    (extracted tools)
+These folders will automatically be recreated the next time a build runs or Jenkins is launched.
+
+Jobs and Folders
+Your job or folder configurations, build histories, archived artifacts, and workspace will exist entirely within the jobs folder.
+
+The jobs directory, whether nested within a folder or at the root level is as follows:
+
+ +- jobs           (root directory for all Jenkins jobs)
+     +- [JOBNAME]      (sub directory for each job)
+         +- config.xml     (job configuration file)
+         +- workspace      (working directory for the version control system)
+         +- latest         (symbolic link to the last successful build)
+         +- builds         (stores past build records)
+             +- [BUILD_ID]     (subdirectory for each build)
+                 +- build.xml      (build result summary)
+                 +- log            (log file)
+                 +- changelog.xml  (change log)
+                 
+  f you only need to backup your job configurations, you can opt to only backup the config.xml for each job. Generally build records and workspaces do not need to be backed up, as workspaces will be re-created when a
+  job is run and build records are only as important as your organizations deems them.               
 
 
