@@ -316,7 +316,10 @@ The jobs directory, whether nested within a folder or at the root level is as fo
                  +- log            (log file)
                  +- changelog.xml  (change log)
                  
-  f you only need to backup your job configurations, you can opt to only backup the config.xml for each job. Generally build records and workspaces do not need to be backed up, as workspaces will be re-created when a
-  job is run and build records are only as important as your organizations deems them.               
+  If you only need to backup your job configurations, you can opt to only backup the config.xml for each job. Generally build records and workspaces do not need to be backed up, as workspaces will be re-created when a
+  job is run and build records are only as important as your organizations deems them.      
+  
+  The metrics plugin is an open-source plugin that exposed Jenkins metrics. Metrics are exposed using the Dropwizard Metrics API
+  
 
 
