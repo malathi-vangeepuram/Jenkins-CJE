@@ -19,3 +19,31 @@ jenkins.telemetry.Correlator.xml                userContent
 jobs                                            users
 logs                                            war
 nodeMonitors.xml                                workflow-libs
+
+
+This exam will primarily cover questions about a “base” Jenkins installation, but knowledge of the
+following plugins will also be covered. Candidates are expected to know the functionality/uses
+of these plugins but will not be tested on detailed usage:
+• Amazon EC2 Plugin
+• Build Pipeline Plugin
+• CloudBees Docker Build and Publish Plugin
+• CloudBees Folders Plugin
+• Copy Artifact Plugin
+• Credentials Plugin
+• Disk Usage Plugin
+• Docker Plugin
+• Email-ext Plugin
+• Fingerprint Plugin
+• Git Plugin
+• IRC Plugin
+• JUnit Plugin
+• Jabber Plugin
+• Matrix Project Plugin
+• NodeLabel Parameter Plugin
+• Parameterized Trigger Plugin
+• Pipeline Plugin (formerly known as Workflow)
+• Promoted Builds Plugin
+• Radiator View Plugin
+• SMS Notification Plugin
+• Script Security Plugin
+• Skype Plugin
