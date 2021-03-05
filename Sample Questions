@@ -213,7 +213,7 @@ Answer: C
              b. Enable artifact fingerprint option. 
              c. Add a post build step to archive artifacts. Archived files will be accessible from jenkins webpage. 
              d. Use promoted builds plugin.
-             Answer: b
+             Answer: c
              
          26. A new developer has joined your team. This team has a folder o your jenkins server that uses project based matrix security. You are told that 
              the new employee cannot see the folder once they have logged in. Global permissions are set to allow authenticated users read access at both 
@@ -223,7 +223,7 @@ Answer: C
              b. The folder permissions need to be explicitly configured to allow authenticated user access. 
              c. The folder permission is configured to disable global inheritance and the user does not have explicit read access to the concerned folder. 
              d. The global user setiings need to be modified to allow anyone access to anything.   
-             Answer: 
+             Answer: c
 
           27. What's not true about a build executor?
               Choose the correct answer:
