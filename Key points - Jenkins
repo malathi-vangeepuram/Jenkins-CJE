@@ -24,7 +24,7 @@ nodeMonitors.xml                                workflow-libs
 This exam will primarily cover questions about a “base” Jenkins installation, but knowledge of the
 following plugins will also be covered. Candidates are expected to know the functionality/uses
 of these plugins but will not be tested on detailed usage:
-• Amazon EC2 Plugin
+• Amazon EC2 Plugin                                    -
 • Build Pipeline Plugin
 • CloudBees Docker Build and Publish Plugin
 • CloudBees Folders Plugin
@@ -43,7 +43,7 @@ Github plugin                                              - For receiving PUSH 
 • NodeLabel Parameter Plugin
 • Parameterized Trigger Plugin
 • Pipeline Plugin (formerly known as Workflow)
-• Promoted Builds Plugin
+• Promoted Builds Plugin                                    - For promoting to next env based on prootion criteria
 • Radiator View Plugin
 • SMS Notification Plugin
 • Script Security Plugin
