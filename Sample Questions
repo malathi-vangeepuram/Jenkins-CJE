@@ -383,6 +383,55 @@ Answer: C
              D. The Blue Ocean editor does not display the 'post' section blocks although they can be viewed and modified in the Blue Ocean code editor.
              E. The conditional blocks are executed in the order they are coded in the Pipeline.
              Correct Answer: B, C, E
+             
+          40. 
+          
+         You are using GitHub repository scanning (in a project of type "GitHub Organization") with the Pipeline
+         jenkinsfile Project Recognizer. In this case, which repositories under the organization will have
+         Multibranch projects automatically created for them?
+         A. only repositories that contain a Jenkinsfile in all their branches
+         B. only repositories that contain a Jenkinsfile in at least one branch
+         C. all repositories that contain a Jenkinsfile in at least one branch or pull request
+         D. all repositories
+         Answer: A
+        
+         41. How can you configure a Declarative Pipeline to record the fingerprint of an artifact?
+         A. CaII the fingerprintArtifact() step immediately after the archiveArtifacts( ) step.
+         B. Enable the Declarative Pipeline 'enableFingerprints' 'option' .
+         C. Set the Fingerprint Artifacts global configuration option.
+         D. Set the "fingerprint: true" argument for the archiveArtifactsQ step.
+         E. No action is required; Declarative Pipelines automatically record a fingerprint for each artifact.
+         Answer: D
+         
+         42. Which are commonly referenced as key points of CI?
+         Choose 3 answers
+         A. Automated deployment to the production environment.
+         B. Collaboration among Dev, QA and Ops.
+         C. Automated tests after each commit
+         D. Automated builds after each commit.
+         E. Frequent commits to source code repository.
+         Answer: C, D, E
+         
+
+         43. A unit test_________.
+         A. tests an Individual unit a component
+         B. verifies cross-functionalities
+         C. verifies that the complete software matches the specifications it was written to fulfill
+         D. is written when an Integration or multi-environment bog is fixed
+         Answer: A
+         
+         44. Which of the following is true about resuming a Declarative Pipeline?
+         A. Declarative Pipelines cab be restarted after a Jenkins failure but not after a transient outage (such as a
+         network failure or disk space exhaustion).
+         B. Declarative Pipelines can be resumed only after a transient outage (such as a network failure or disk
+         space exhaustion).
+         C. All Declarative Pipelines are restartable by default, with the same inputs (commit to build,
+         parameters, etc) as the original run. Any data that was built In the original run Is available only If the
+         preserveStashes() option Is specified In the Jenkinsfile
+         D. Declarative Pipelines that use Docker containers can not be resumed because the docker APIs that
+         Jenkins calls to create the container are not serialized
+         E. A Declarative Pipeline can be restarted only If the preserveStashes() option Is set In the pipeline.
+         Answer: C   
    
            
             
