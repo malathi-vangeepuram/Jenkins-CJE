@@ -38,7 +38,7 @@ of these plugins but will not be tested on detailed usage:
 • IRC Plugin
 • JUnit Plugin
 • Jabber Plugin
-• Matrix Project Plugin
+• Matrix Project Plugin                                     - For multi configuration jobs/projects to set up the configuration matrix. 
 • NodeLabel Parameter Plugin
 • Parameterized Trigger Plugin
 • Pipeline Plugin (formerly known as Workflow)
