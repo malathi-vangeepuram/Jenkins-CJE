@@ -35,6 +35,7 @@ of these plugins but will not be tested on detailed usage:
 • Email-ext Plugin
 • Fingerprint Plugin
 • Git Plugin
+Github plugin                                              - For receiving PUSH from Git SCM section
 • IRC Plugin
 • JUnit Plugin
 • Jabber Plugin
