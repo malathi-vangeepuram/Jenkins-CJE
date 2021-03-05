@@ -24,23 +24,23 @@ nodeMonitors.xml                                workflow-libs
 This exam will primarily cover questions about a “base” Jenkins installation, but knowledge of the
 following plugins will also be covered. Candidates are expected to know the functionality/uses
 of these plugins but will not be tested on detailed usage:
-• Amazon EC2 Plugin                                    -
-• Build Pipeline Plugin
-• CloudBees Docker Build and Publish Plugin
-• CloudBees Folders Plugin
-• Copy Artifact Plugin
+• Amazon EC2 Plugin                                     - Amazon EC2 automatic scaling                               -
+• Build Pipeline Plugin                                 - Renders upstream and downstram connected jobs 
+• CloudBees Docker Build and Publish Plugin             - Enables dockerfile based projects
+• CloudBees Folders Plugin                              - Allows users to create folders to organize jobs in multi branch pipeline projects
+• Copy Artifact Plugin                                  - To copy artifacts from one project to another
 • Credentials Binding Plugin                            -  Allows you to take credentials of various sorts and use them from shell build steps 
-• Disk Usage Plugin
-• Docker Plugin
-• Email-ext Plugin
-• Fingerprint Plugin
-• Git Plugin
-Github plugin                                              - For receiving PUSH from Git SCM section
-• IRC Plugin
-• JUnit Plugin
-• Jabber Plugin
-• Matrix Project Plugin                                     - For multi configuration jobs/projects to set up the configuration matrix. 
-• NodeLabel Parameter Plugin
+• Disk Usage Plugin                                     - counts disk usage
+• Docker Plugin                                         - integrates jenkins with docker 
+• Email-ext Plugin                                      - email notifications 
+• Fingerprint Plugin                                    - Add ability to fingerprint files as build steps
+• Git Plugin                                            - integrates git with jenkins 
+Github plugin                                           - For receiving PUSH from Git SCM section
+• IRC Plugin                                            - Internet relay chat 
+• JUnit Plugin                                          - integrates with junit 
+• Jabber Plugin                                         - IM tool
+• Matrix Project Plugin                                 - For multi configuration jobs/projects to set up the configuration matrix. 
+• NodeLabel Parameter Plugin                            - 
 • Parameterized Trigger Plugin
 • Pipeline Plugin (formerly known as Workflow)
 • Promoted Builds Plugin                                    - For promoting to next env based on prootion criteria
