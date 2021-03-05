@@ -49,3 +49,4 @@ Github plugin                                              - For receiving PUSH 
 • Script Security Plugin
 • Skype Plugin
 Branch API plugin                                         -For throttle builds
+Build Token Root Plugin                                   - To trigger builds remotely from scripts
