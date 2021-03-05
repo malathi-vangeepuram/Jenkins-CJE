@@ -29,7 +29,7 @@ of these plugins but will not be tested on detailed usage:
 • CloudBees Docker Build and Publish Plugin
 • CloudBees Folders Plugin
 • Copy Artifact Plugin
-• Credentials Plugin
+• Credentials Binding Plugin                            -  Allows you to take credentials of various sorts and use them from shell build steps 
 • Disk Usage Plugin
 • Docker Plugin
 • Email-ext Plugin
