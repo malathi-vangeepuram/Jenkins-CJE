@@ -40,13 +40,13 @@ Github plugin                                           - For receiving PUSH fro
 • JUnit Plugin                                          - integrates with junit 
 • Jabber Plugin                                         - IM tool
 • Matrix Project Plugin                                 - For multi configuration jobs/projects to set up the configuration matrix. 
-• NodeLabel Parameter Plugin                            - 
-• Parameterized Trigger Plugin
-• Pipeline Plugin (formerly known as Workflow)
-• Promoted Builds Plugin                                    - For promoting to next env based on prootion criteria
-• Radiator View Plugin
-• SMS Notification Plugin
-• Script Security Plugin
-• Skype Plugin
-Branch API plugin                                         -For throttle builds
-Build Token Root Plugin                                   - To trigger builds remotely from scripts
+• NodeLabel Parameter Plugin                            - To dynamically select the nodes 
+• Parameterized Trigger Plugin                          - Triggers a job on remote jenkins host
+• Pipeline Plugin (formerly known as Workflow)          - For pipeline jobs 
+• Promoted Builds Plugin                                - For promoting to next env based on promotion criteria
+• Radiator View Plugin                                  - Adds radiator view for showing jobs 
+• SMS Notification Plugin                               - To send SMS
+• Script Security Plugin                                - For In process script approval
+• Skype Plugin                                          - Integrates with skype
+Branch API plugin                                       - For throttle builds
+Build Token Root Plugin                                 - To trigger builds remotely from scripts
