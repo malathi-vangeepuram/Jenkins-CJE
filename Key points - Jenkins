@@ -50,3 +50,21 @@ Github plugin                                           - For receiving PUSH fro
 • Skype Plugin                                          - Integrates with skype
 Branch API plugin                                       - For throttle builds
 Build Token Root Plugin                                 - To trigger builds remotely from scripts
+
+Config File Provider Plugin Adds the ability to provide configuration files (i.e., settings.xml for maven, XML, groovy, custom files, etc.) loaded through the Jenkins UI which will be copied to the job’s workspace.
+
+Global Post Script Plugin — Execute a global configured groovy script after each build of each job managed by the Jenkins.
+This is typical for cases when you need to do something based on a shared set of parameters, such as triggering downstream jobs managed by the same Jenkins or remote ones based on the parameters been passed to the parameterized jobs.
+
+Groovy plugin: Plugins enabling groovy scripts are as below: 
+
+Groovy Postbuild Plugin — This plugin executes a groovy script in the Jenkins JVM. Typically, the script checks some conditions and changes accordingly the build result, puts badges next to the build in the build history and/or displays information on the build summary page.
+
+Groovy Remote Control Plugin — This plugin provides Groovy Remote Control's receiver, and allows to control external application from Jenkins.
+
+Matrix Groovy Execution Strategy Plugin — A plugin to decide the execution order and valid combinations of matrix projects.
+
+Pipeline Classpath Step Plugin Pipeline DSL step to add path to the groovy classpath
+
+Scriptler Plugin — Scriptler allows you to store/edit groovy scripts and execute it on any of the nodes…​ no need to copy/paste groovy code anymore.
+
